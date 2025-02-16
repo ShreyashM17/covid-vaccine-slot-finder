@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/signup.css' %}">
+</head>
+<body>
+	<div class="main">
+		<form method="POST">
+			{% csrf_token %}
+		<div>
+			<p>Email id: {{ form.Email_id }}</p>
+			<p>First Name: {{ form.First_name }}</p>
+			<p>Last Name: {{ form.Last_name }}</p>
+			<p>Phone number: {{ form.Phone_number }}</p>
+			<p>Date of Birth: {{ form.Date_of_birth }}</p>
+			<p>Type of document: {{ form.Document }}</p>
+			<p>Aadhar/Pancard No.: {{ form.document_no }}</p>
+			<button type="submit">Submit</button>
+			{% if sent %}
+			<p>Email sent Successfully</p>
+			{% endif %}
+		</div>
+		</form>
+	</div>
+</body>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/homepage.css'%}">
+    <script type='text/javascript' src="{% static 'js/homepage.js' %}"></script>
+    <title>Homepage</title>
+</head>
+<body id="body">
+    Welcome to vaccine locator
+    <div>
+        <button><a href="/login">Login</a></button>
+        <button><a href="/signup">Sign up</a></button>
+        <button onclick="myFunction()" id="button" class="dark-mode">Dark mode</button>
+    </div>
+</body>
+</html>
